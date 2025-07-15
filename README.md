@@ -50,3 +50,18 @@ Exemplo de uso:
 ```java
 @Query("SELECT p FROM Produto p JOIN FETCH p.categorias")
 List<Produto> buscarComCategorias();
+````
+Entendendo @Transactional e Open-In-View
+O @Transactional é essencial pra dizer quando começa e termina uma transação.
+
+Já o Open-In-View permite manter a sessão aberta até o final da requisição — útil pra evitar erro de LAZY, mas tem que usar com cuidado por questões de performance.
+
+Aprendi como usar isso da forma certa pra manter a aplicação consistente e sem bugs.
+
+Consultas com Query Methods
+O Spring permite criar métodos no repositório e ele gera a query automaticamente, só com base no nome do método. Muito prático!
+```java
+List<Produto> findByNomeContaining(String nome);
+````
+```java
+List<Cliente> findByCidadeAndStatus(String cidade, String status);
