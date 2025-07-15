@@ -51,6 +51,7 @@ Exemplo de uso:
 @Query("SELECT p FROM Produto p JOIN FETCH p.categorias")
 List<Produto> buscarComCategorias();
 ````
+###  Consultas com Query Methods
 Entendendo @Transactional e Open-In-View
 O @Transactional é essencial pra dizer quando começa e termina uma transação.
 
